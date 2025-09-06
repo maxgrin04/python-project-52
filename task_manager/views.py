@@ -8,3 +8,17 @@ from django.shortcuts import render
 
 class IndexView(TemplateView):
     template_name = "index.html"
+
+
+class CustomLoginView(SuccessMessageMixin, LoginView):
+    template_name = 'login.html'
+    next_page = reverse_lazy('home')
+    success_message = 'Вы залогинены'
+
+
+class CustomLogoutView(SuccessMessageMixin, LogoutView):
+    next_page = 'home'
+
+    def dispatch(self, request, *args, **kwargs):
+        messages.info(request, "Вы разлогинены")
+        return super().dispatch(request, *args, **kwargs)
