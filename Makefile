@@ -1,4 +1,4 @@
-.PHONY: install migrate collectstatic build render-start dev lint lint-fix
+.PHONY: install migrate  build render-start lint lint-fix
 
 build:
 	./build.sh
@@ -16,4 +16,4 @@ render-start:
 	gunicorn task_manager.wsgi
 
 migrate:
-	python manage.py migrate
+	uv	run manage.py migrate
