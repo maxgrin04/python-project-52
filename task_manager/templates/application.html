@@ -18,17 +18,27 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'users_list' %}">Пользователи</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav">
             <ul class="navbar-nav">
               <form action="{% url 'logout' %}" method="post">
                 {% csrf_token %}
                 <input class="btn nav-link" type="submit" value="Выход">
               </form>
-              <li class="nav-item">
-              <a class="nav-link" href="{% url 'login' %}">Вход</a>
-              </li>
             </ul>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'login' %}">Вход</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'users_create' %}">Регистрация</a>
+            </li>
+        </ul>
       </div>
-    </nav>  
+    </nav>
       {% block content %}{% endblock %}
     </div>
   </body>
