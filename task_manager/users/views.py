@@ -1,3 +1,7 @@
+from django.shortcuts import render
+
+from django.shortcuts import render
+
 from django.contrib.messages.views import SuccessMessageMixin
 from django.urls import reverse_lazy
 from django.views.generic.edit import CreateView, DeleteView, UpdateView
@@ -44,4 +48,3 @@ class UserDeleteView(LoginPermissionRequiredMixin, UserPermissionRequiredMixin,
     reject_url = reverse_lazy('users_list')
     reject_message = ('Невозможно удалить пользователя, '
                       'потому что он используется')
-
