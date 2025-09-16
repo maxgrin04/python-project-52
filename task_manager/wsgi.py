@@ -21,8 +21,6 @@ try:
     if hasattr(settings, 'ROLLBAR') and settings.ROLLBAR.get('access_token'):
         rollbar.init(**settings.ROLLBAR)
 except ImportError:
-    # Rollbar не установлен - пропускаем
     pass
 except Exception as e:
-    # Логируем ошибку инициализации, но не падаем
     print(f"Rollbar initialization error: {e}")
