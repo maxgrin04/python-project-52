@@ -13,7 +13,7 @@ lint-fix:
 	uv run ruff check --fix .
 
 render-start:
-	gunicorn task_manager.wsgi:application --bind 0.0.0.0:${PORT:-8000}
+	gunicorn task_manager.wsgi:application --bind 0.0.0.0:$${PORT:-8000}
 
 migrate:
 	uv run python manage.py makemigrations && \
