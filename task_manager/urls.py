@@ -22,7 +22,7 @@ from .views import CustomLoginView, CustomLogoutView
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', TemplateView.as_view(template_name='index.html'), name='home'),
-    path('users/', include('users.urls')),
+    path('users/', include('task_manager.users.urls')),
     path('login/', CustomLoginView.as_view(), name='login'),
     path('logout/', CustomLogoutView.as_view(), name='logout'),
     path('statuses/', include('task_manager.statuses.urls')),
