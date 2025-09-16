@@ -1,4 +1,4 @@
-.PHONY: install migrate  build render-start lint lint-fix
+.PHONY: install migrate build render-start lint lint-fix start-server test test-coverage dev
 
 build:
 	./build.sh
@@ -25,5 +25,8 @@ test:
 test-coverage:
 	DJANGO_SETTINGS_MODULE=task_manager.settings uv run pytest --cov=task_manager --cov-report=xml
 
-make dev:
+dev:
 	uv run python manage.py runserver
+
+start-server:
+	uv	run	python	manage.py	runserver

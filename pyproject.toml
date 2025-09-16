@@ -24,3 +24,13 @@ dev = [
     "pytest-django>=4.11.1",
     "ruff>=0.12.11",
 ]
+
+[tool.ruff]
+line-length = 80
+
+[lint.per-file-ignores]
+"__init__.py" = ["F401"]
+
+[lint]
+preview = true
+select = ["E", "F", "I", "C90"]
