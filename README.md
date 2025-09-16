@@ -12,7 +12,6 @@
 
 ### CodeClimate Badges
 [![Maintainability](https://qlty.sh/gh/maxgrin04/projects/python-project-52/maintainability.svg)](https://qlty.sh/gh/maxgrin04/projects/python-project-52)
-[![Code Coverage](https://qlty.sh/gh/maxgrin04/projects/python-project-52/coverage.svg)](https://qlty.sh/gh/maxgrin04/projects/python-project-52)
 
 </div>
 
