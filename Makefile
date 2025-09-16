@@ -29,4 +29,4 @@ dev:
 	uv run python manage.py runserver
 
 start-server:
-	uv run python manage.py runserver 0.0.0.0:3000
+	cd code && ../.venv/bin/python manage.py runserver 0.0.0.0:3000
