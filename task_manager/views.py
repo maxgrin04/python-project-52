@@ -3,6 +3,7 @@ from django.contrib.auth.views import LoginView, LogoutView
 from django.contrib.messages.views import SuccessMessageMixin
 from django.urls import reverse_lazy
 from django.views.generic import TemplateView
+from django.http import HttpResponse
 
 
 class IndexView(TemplateView):
@@ -22,9 +23,6 @@ class CustomLogoutView(SuccessMessageMixin, LogoutView):
         messages.info(request, "Вы разлогинены")
         return super().dispatch(request, *args, **kwargs)
 
-
-from django.shortcuts import render
-from django.http import HttpResponse
 
 def index(request):
     a = None
