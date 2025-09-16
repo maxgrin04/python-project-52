@@ -34,7 +34,7 @@ ALLOWED_HOSTS = [
     'webserver',
     'localhost', 
     '127.0.0.1',
-    '.onrender.com'
+    'https://python-project-52-dihb.onrender.com'
 ]
 
 
@@ -51,6 +51,9 @@ INSTALLED_APPS = [
     'task_manager',
     'task_manager.users',
     'task_manager.statuses',
+    'task_manager.tasks',
+    'task_manager.labels',
+    'django_filters',
 ]
 
 AUTH_USER_MODEL = 'users.User'
@@ -150,3 +153,12 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+ACCESS_TOKEN = os.getenv('ACCESS_TOKEN')
+ROLLBAR = {
+    'access_token': ACCESS_TOKEN,
+    'environment': 'development' if DEBUG else 'production',
+    'code_version': '1.0',
+    'root': BASE_DIR,
+}

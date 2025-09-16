@@ -16,4 +16,14 @@ render-start:
 	gunicorn task_manager.wsgi
 
 migrate:
-	uv	run manage.py migrate
+	uv run python manage.py makemigrations && \
+	uv run python manage.py migrate
+
+test:
+	uv run python manage.py test
+
+test-coverage:
+	DJANGO_SETTINGS_MODULE=task_manager.settings uv run pytest --cov=task_manager --cov-report=xml
+
+make dev:
+	uv run python manage.py runserver

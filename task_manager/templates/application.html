@@ -25,8 +25,15 @@
         </ul>
         <ul class="navbar-nav">
           {% if request.user.is_authenticated %}
+            <!-- Navbar для авторизованного пользователя -->
             <li class="nav-item">
               <a class="nav-link" href="{% url 'status_list' %}">Статусы</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'labels_list' %}">Метки</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'tasks_list' %}">Задачи</a>
             </li>
             <ul class="navbar-nav">
               <form action="{% url 'logout' %}" method="post">
@@ -35,6 +42,7 @@
               </form>
             </ul>
           {% else %}
+            <!-- Navbar для гостя (не авторизованного пользователя) -->
             <li class="nav-item">
               <a class="nav-link" href="{% url 'login' %}">Вход</a>
             </li>
