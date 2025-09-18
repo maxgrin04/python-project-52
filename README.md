@@ -11,6 +11,9 @@
 [![Python CI](https://github.com/maxgrin04/python-project-52/actions/workflows/pyci.yml/badge.svg)](https://github.com/maxgrin04/python-project-52/actions/workflows/pyci.yml)
 
 ### SonarQube Badges
+
+[![Build](https://github.com/maxgrin04/python-project-52/actions/workflows/build.yml/badge.svg)](https://github.com/maxgrin04/python-project-52/actions/workflows/build.yml)
+
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=maxgrin04_python-project-52&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=maxgrin04_python-project-52)
 
 [![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=maxgrin04_python-project-52)](https://sonarcloud.io/summary/new_code?id=maxgrin04_python-project-52)
