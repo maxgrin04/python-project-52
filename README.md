@@ -8,7 +8,7 @@
 [![Actions Status](https://github.com/maxgrin04/python-project-52/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/maxgrin04/python-project-52/actions)
 
 ### Python CI Badge
-[![Python CI](https://github.com/maxgrin04/python-project-52/actions/workflows/pyci.yml/badge.svg)](https://github.com/maxgrin04/python-project-52/actions/workflows/pyci.yml)
+[![Python CI](https://github.com/maxgrin04/python-project-52/actions/workflows/my_workflow.yml/badge.svg)](https://github.com/maxgrin04/python-project-52/actions/workflows/my_workflow.yml)
 
 ### SonarQube Badges
 
