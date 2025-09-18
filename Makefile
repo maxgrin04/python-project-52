@@ -23,7 +23,7 @@ test:
 	uv run python manage.py test
 
 test-coverage:
-	DJANGO_SETTINGS_MODULE=task_manager.settings uv run pytest --cov=task_manager --cov-report=xml
+	DJANGO_SETTINGS_MODULE=task_manager.settings uv run pytest --cov=task_manager --cov-report=xml:coverage.xml
 
 dev:
 	uv run python manage.py runserver

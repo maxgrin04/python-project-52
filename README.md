@@ -10,8 +10,8 @@
 ### Python CI Badge
 [![Python CI](https://github.com/maxgrin04/python-project-52/actions/workflows/pyci.yml/badge.svg)](https://github.com/maxgrin04/python-project-52/actions/workflows/pyci.yml)
 
-### CodeClimate Badges
-[![Maintainability](https://qlty.sh/gh/maxgrin04/projects/python-project-52/maintainability.svg)](https://qlty.sh/gh/maxgrin04/projects/python-project-52)
+### SonarQube Badges
+[![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=maxgrin04_python-project-52)](https://sonarcloud.io/summary/new_code?id=maxgrin04_python-project-52)
 
 </div>
 
