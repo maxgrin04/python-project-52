@@ -96,7 +96,8 @@ class TestUserCreateView(UserTestCase):
     def test_create_invalid_password(self):
         invalid_user = self.test_users['create']['invalid_password']
         error_substrings = [
-            'This password is too short. It must contain at least 3 characters.',
+            'This password is too short. '
+            'It must contain at least 3 characters.',
             'This password is too short.',
             'Password is too short.'
         ]
@@ -108,9 +109,14 @@ class TestUserCreateView(UserTestCase):
         self.assertIn('password2', errors)
     
         password_error = ' '.join(errors['password2'])
-        has_short_password_error = any(substring in password_error for substring in error_substrings)
-        self.assertTrue(has_short_password_error, 
-                        f"Expected short password error, but got: {password_error}")
+        has_short_password_error = any(
+            substring in password_error
+            for substring in error_substrings
+        )
+        self.assertTrue(
+            has_short_password_error,
+            f"Expected short password error, but got: {password_error}"
+        )
     
         self.assertEqual(get_user_model().objects.count(), self.users_count)
 
@@ -131,10 +137,14 @@ class TestUserCreateView(UserTestCase):
         self.assertIn('password2', errors)
     
         password_error = ' '.join(errors['password2']).lower()
-        has_mismatch_error = any(substring.lower() in password_error 
-                                for substring in error_substrings)
-        self.assertTrue(has_mismatch_error,
-                        f"Expected password mismatch error, but got: {password_error}")
+        has_mismatch_error = any(
+            substring.lower() in password_error
+            for substring in error_substrings
+        )
+        self.assertTrue(
+            has_mismatch_error,
+            f"Expected password mismatch error, but got: {password_error}"
+        )
     
         self.assertEqual(get_user_model().objects.count(), self.users_count)
 
