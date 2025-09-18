@@ -95,7 +95,9 @@ class TestUserCreateView(UserTestCase):
 
     def test_create_invalid_password(self):
         invalid_user = self.test_users['create']['invalid_password']
-        error_substring = 'This password is too short. It must contain at least 8 characters.'
+        error_substring = (
+            'This password is too short. It must contain at least 8 characters.'
+        )
         response = self.client.post(reverse_lazy('users_create'),
                                     data=invalid_user)
         errors = response.context['form'].errors
