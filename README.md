@@ -10,15 +10,9 @@
 ### Python CI Badge
 [![Python CI](https://github.com/maxgrin04/python-project-52/actions/workflows/my_workflow.yml/badge.svg)](https://github.com/maxgrin04/python-project-52/actions/workflows/my_workflow.yml)
 
-### SonarQube Badges
+### SonarQube Badge
 
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=maxgrin04_python-project-52&metric=coverage)](https://sonarcloud.io/summary/new_code?id=maxgrin04_python-project-52)
-
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=maxgrin04_python-project-52&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=maxgrin04_python-project-52)
-
-[![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=maxgrin04_python-project-52)](https://sonarcloud.io/summary/new_code?id=maxgrin04_python-project-52)
-
-[![SonarQube Cloud](https://sonarcloud.io/images/project_badges/sonarcloud-light.svg)](https://sonarcloud.io/summary/new_code?id=maxgrin04_python-project-52)
 
 </div>
 
