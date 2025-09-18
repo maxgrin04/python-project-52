@@ -28,6 +28,7 @@ jobs:
         uses: SonarSource/sonarqube-scan-action@v5
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          DJANGO_SETTINGS_MODULE: task_manager.settings
         with:
           args: >
             -Dsonar.projectKey=maxgrin04_python-project-52
