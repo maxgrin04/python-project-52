@@ -3,7 +3,6 @@ from django.contrib.messages import get_messages
 from django.core.exceptions import ObjectDoesNotExist
 from django.test import Client, TestCase
 from django.urls import reverse_lazy
-from django.utils.translation import activate
 
 from .utils import from_json
 
