@@ -1,6 +1,6 @@
 [
     {
-        "model": "auth.user",
+        "model": "users.User",
         "pk": 1,
         "fields": {
             "username": "Homer",
@@ -11,7 +11,7 @@
         }
     },
     {
-        "model": "auth.user",
+        "model": "users.User",
         "pk": 2,
         "fields": {
             "username": "Marge",
@@ -22,7 +22,7 @@
         }
     },
     {
-        "model": "auth.user",
+        "model": "users.User",
         "pk": 3,
         "fields": {
             "username": "Bart",

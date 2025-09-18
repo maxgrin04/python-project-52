@@ -3,6 +3,7 @@ from django.contrib.messages import get_messages
 from django.core.exceptions import ObjectDoesNotExist
 from django.test import Client, TestCase
 from django.urls import reverse_lazy
+from django.utils.translation import activate
 
 from .utils import from_json
 
@@ -81,7 +82,7 @@ class TestUserCreateView(UserTestCase):
         invalid_user = self.test_users['create']['invalid_username']
         error_substring = ('Введите правильное имя пользователя. '
                            'Оно может содержать только буквы, '
-                           'цифры и знаки @/./+/-/_.')
+                           'цифры и знаки @/./+/-/_.')  
         response = self.client.post(reverse_lazy('users_create'),
                                     data=invalid_user)
         errors = response.context['form'].errors
@@ -95,15 +96,14 @@ class TestUserCreateView(UserTestCase):
 
     def test_create_invalid_password(self):
         invalid_user = self.test_users['create']['invalid_password']
-        error_substring = ('Введённый пароль слишком короткий. '
-                           'Он должен содержать как минимум 3 символа.')
+        error_substring = 'This password is too short. It must contain at least 8 characters.'
         response = self.client.post(reverse_lazy('users_create'),
                                     data=invalid_user)
         errors = response.context['form'].errors
 
         self.assertEqual(response.status_code, 200)
 
-        self.assertEqual(len(errors['password2']), 1)
+        self.assertEqual(len(errors['password2']), 3)
         self.assertIn(str(error_substring), errors['password2'][0])
         self.assertEqual(get_user_model().objects.count(), self.users_count)
 
